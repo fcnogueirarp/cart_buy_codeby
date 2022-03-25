@@ -11,9 +11,8 @@ function Buttons({ children: price }) {
   function handleClickLess() {
     if (count > 0 && count <= 1) {
       setCount(--count);
-      setTotal(price * -1);
     }
-  } 
+  }
   function handleClickMore() {
     if (count >= 0 && count < 1) {
       setCount(++count);
@@ -23,10 +22,14 @@ function Buttons({ children: price }) {
 
   useEffect(() => {
     const nodes = document.querySelectorAll('.Buttons_total__Rb530');
-
-    for (var i = 0; i < nodes.length; ++i) {
-      let nodeValues = [nodes[i].innerText];
-      arr.push(nodeValues);
+    console.log(nodes);
+    for (var i = 0; i < nodes.length; i++) {
+      let nodeValues = parseInt([nodes[i].innerHTML]);
+      console.log(nodeValues);
+      if (nodeValues.valueOf(!isNaN)) {
+        arr.push(nodeValues);
+      }
+      console.log(arr);
       setFinalTotal(arr.reduce((a, b) => +a + +b, 0));
     }
   }, [total, arr]);

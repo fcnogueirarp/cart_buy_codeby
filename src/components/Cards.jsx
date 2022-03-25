@@ -1,8 +1,16 @@
+/*react*/
 import React, { useEffect, useState } from 'react';
+
+/*backend from axios*/
 import { apiDown, apiUp } from '../services/httpService/api';
+
+/*UUID - help in the render of component*/
 import { getNewId } from '../services/UUID/uuid';
-import styles from './Cards.module.css';
+
+/*Library - help in the work with arrays*/
 import _ from 'lodash';
+
+import styles from './Cards.module.css';
 import Buttons from './Buttons';
 import Total from './Total';
 
@@ -12,6 +20,7 @@ function Cards(props) {
   const [productUp, setProductUp] = useState([]);
   const [productDown, setProductDown] = useState([]);
 
+  /* Backend requisition and change state*/
   useEffect(() => {
     (async function up() {
       const apiUpGet = await apiUp.get();
@@ -58,7 +67,7 @@ function Cards(props) {
             </div>
           );
         })}
-        <Total></Total>
+        <Total />
       </section>
     </>
   );
