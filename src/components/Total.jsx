@@ -18,9 +18,11 @@ function Total() {
       Swal.fire('Carrinho Vazio!', '', 'error');
     } else {
       Swal.fire('Compra efetuada com sucesso!', '', 'success');
-      setStorage(localStorage.removeItem('total'));
 
-      window.location.reload();
+      setInterval(() => {
+        setStorage(localStorage.removeItem('total'));
+        window.location.reload();
+      }, 2000);
     }
   }
   return (

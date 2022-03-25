@@ -17,14 +17,11 @@ function Buttons({ children: price }) {
 
   useEffect(() => {
     const nodes = document.querySelectorAll('.Buttons_total__Rb530');
-    console.log(nodes);
     for (var i = 0; i < nodes.length; i++) {
       let nodeValues = parseInt([nodes[i].innerHTML]);
-      console.log(nodeValues);
       if (nodeValues.valueOf(!isNaN)) {
         arr.push(nodeValues);
       }
-      console.log(arr);
       setFinalTotal(arr.reduce((a, b) => +a + +b, 0));
     }
   }, [total, arr]);

@@ -48,6 +48,7 @@ function Cards(props) {
   return (
     <>
       <section>
+        {console.log(allProductsUniq)}
         {allProductsUniq.map(item => {
           return (
             <div key={getNewId()} className={styles.card}>
