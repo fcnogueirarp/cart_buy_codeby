@@ -16,7 +16,12 @@ function Total() {
   function handleClickMessage() {
     if (storage == 0) {
       Swal.fire('Carrinho Vazio!', '', 'error');
-    } else Swal.fire('Compra efetuada com sucesso!', '', 'success');
+    } else {
+      Swal.fire('Compra efetuada com sucesso!', '', 'success');
+      setStorage(localStorage.removeItem('total'));
+
+      window.location.reload();
+    }
   }
   return (
     <>
