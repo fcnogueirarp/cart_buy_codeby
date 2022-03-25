@@ -28,7 +28,6 @@ function Buttons({ children: price }) {
       let nodeValues = [nodes[i].innerText];
       arr.push(nodeValues);
       setFinalTotal(arr.reduce((a, b) => +a + +b, 0));
-      console.log(arr.reduce((a, b) => +a + +b, 0));
     }
   }, [total, arr]);
 

@@ -14,7 +14,9 @@ function Total() {
     return () => clearInterval(interval);
   }, []);
   function handleClickMessage() {
-    Swal.fire('Compra efetuada com sucesso!', '', 'success');
+    if (storage == 0) {
+      Swal.fire('Carrinho Vazio!', '', 'error');
+    } else Swal.fire('Compra efetuada com sucesso!', '', 'success');
   }
   return (
     <>
@@ -23,7 +25,9 @@ function Total() {
         <span>R${storage}</span>
       </div>
       {storage >= 10 && (
-        <div className={styles.hidden}>Parabéns sua compra tem frete grátis</div>
+        <div className={styles.hidden}>
+          Parabéns sua compra tem frete grátis
+        </div>
       )}
       <button onClick={handleClickMessage}>Finalizar Compra</button>
     </>
