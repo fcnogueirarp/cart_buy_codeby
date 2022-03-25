@@ -1,0 +1,123 @@
+section {
+  padding: 10px 200px;
+  background-color: gray;
+}
+
+.card,
+.card__description {
+  display: flex;
+}
+
+.card {
+  padding: 10px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.card:nth-child(1) {
+  padding-top: 60px;
+}
+.card:nth-child(1n) {
+  background-color: #4f3d6b;
+  color: #9d00ff;
+}
+.card:nth-child(2n) {
+  background-color: #9d00ff;
+  color: #4f3d6b;
+}
+
+.card img {
+  width: 20%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.card img:hover {
+  transform: rotate(-90deg);
+  transition: 2s all ease;
+}
+.card__description {
+  padding: 30px;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+}
+.card__description:hover {
+  transition: 2s ease;
+}
+.card__description h6 {
+  color: #f9f9f9;
+  text-decoration: line-through;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.card__description h5 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    background-color: gray;
+  }
+
+  .card,
+  .card__description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .card:nth-child(1) {
+    padding-top: 60px;
+  }
+  .card:nth-child(1n) {
+    background-color: #4f3d6b;
+    color: #9d00ff;
+  }
+  .card:nth-child(2n) {
+    background-color: #9d00ff;
+    color: #4f3d6b;
+  }
+
+  .card img {
+    flex: 1;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  .card img:hover {
+    transform: rotate(-90deg);
+    transition: 2s all ease;
+  }
+  .card__description {
+    padding: 0;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 auto;
+  }
+  .card__description:hover {
+    transition: 2s ease;
+  }
+  .card__description h6 {
+    color: #f9f9f9;
+    text-decoration: line-through;
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  .card__description h5 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
