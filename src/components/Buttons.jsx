@@ -8,11 +8,6 @@ function Buttons({ children: price }) {
   let [finalTotal, setFinalTotal] = useState([]);
   let [storage, setStorage] = useState([]);
 
-  function handleClickLess() {
-    if (count > 0 && count <= 1) {
-      setCount(--count);
-    }
-  }
   function handleClickMore() {
     if (count >= 0 && count < 1) {
       setCount(++count);
@@ -41,7 +36,6 @@ function Buttons({ children: price }) {
   return (
     <>
       <div className={styles.container__buttons}>
-        <span onClick={handleClickLess}> - </span>
         <h2>{count}</h2>
         <span onClick={handleClickMore}> + </span>
         <div className={styles.container}></div>
