@@ -5,12 +5,15 @@
   padding: 10px;
   color: green;
 }
+.container__buttons h2 {
+  font-size: 5em;
+}
 .container__buttons span {
   display: flex;
   justify-content: space-around;
   padding: 10px;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 3em;
 }
 span:hover {
   cursor: pointer;
